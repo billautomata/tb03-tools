@@ -1,6 +1,6 @@
 # tb03-tools
 
-> A Vue.js project
+> An interactive web application that lets you visualize and edit your Roland TB-03 patterns.
 
 ## Build Setup
 
