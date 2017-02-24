@@ -5,5 +5,8 @@
   ],
   "env": {
     "jasmine": true
+  },
+  "rules": {
+    "camelcase": 0
   }
 }

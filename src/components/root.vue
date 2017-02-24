@@ -13,7 +13,7 @@ export default {
   data () {
     return {}
   },
-  mounted() {
+  mounted () {
     console.log('mounted!')
     require('../../lib/main.js')()
   }
