@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import tb03_pattern from './pattern.vue'
+import tb03_pattern from './tb03_pattern.vue'
 
 export default {
   name: 'root',
