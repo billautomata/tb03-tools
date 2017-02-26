@@ -4,38 +4,37 @@
     <input type="file" id="files" name="files[]" multiple />
     <output id="list"></output>
     <div id='patterns'></div>
+    <tb03-pattern
+      v-for='(pattern,index) in patterns'
+      v-bind:pattern='pattern'
+      v-bind:index='index'>
+    </tb03-pattern>
   </div>
 </template>
 
 <script>
+import tb03_pattern from './pattern.vue'
+
 export default {
   name: 'root',
+  components: {
+    'tb03-pattern': tb03_pattern
+  },
   data () {
-    return {}
+    return {
+      patterns: []
+    }
   },
   mounted () {
     console.log('mounted!')
-    require('../../lib/main.js')()
+    var patterns = require('../../lib/main.js')()
+    // console.log(patterns, Array.isArray(this.patterns))
+    var self = this
+    patterns.forEach(function(p){
+      self.patterns.push(p)
+    })
   }
 }
 </script>
 
-<style>
-div.pattern-parent {
-  width: 25%;
-  display: inline-block;
-}
-div.individual-step {
-  display: inline-block;
-  /*width: 6%;*/
-}
-div.step-note {
-  padding: 4px;
-}
-button.step-state {
-}
-button.step-accent {
-}
-button.step-slide {
-}
-</style>
+<style></style>
