@@ -19,6 +19,7 @@
       </div>
     </template>
     <div id='sheet-music'></div>
+
   </div>
 </template>
 
@@ -43,6 +44,7 @@ export default {
       parent: d3.select(this.$el).select('div#sheet-music'),
       data: { steps: this.steps }
     })
+
     // console.log(this.pattern)
     // console.log(d3.select(this.$el))
     // require('../../lib/draw_pattern.js')({
